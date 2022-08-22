@@ -30,7 +30,8 @@ h1 {
 
 .input-box {
   display: flex;
-  width: 500px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .address-input {
@@ -48,4 +49,26 @@ h1 {
   background-color: hsl(0, 0%, 0%);
   color: white;
   font-size: 18px;
+}
+
+.info-box {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+  color: grey;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  grid-gap: 5%;
+}
+
+.info-item-border {
+  border-right: 1px solid rgb(185, 185, 185);
+}
+
+
+h3 {
+  color: black;
+  margin-right: 15px;
+  margin-top: 5px;
 }
