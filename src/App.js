@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <h1 className="title">Ip Address Tracker</h1>
+        <div className="input-box">
+          <input type="text" name="address" placeholder="Search for any IP address or domain" className="address-input"/>
+          <button className="submit-button">{'>'}</button>
+        </div>
+      </div>
+      <div>Info PlaceHolder</div>
+      <div>Map PlaceHolder</div>
     </div>
   );
 }
