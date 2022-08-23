@@ -79,7 +79,13 @@ h3 {
 .leaflet-container {
   position: relative;
   z-index: 1;
-  top: -40px;
+  top: -7vh;
   width: 100vw;
   height: 60vh;
+}
+
+.disclaimer {
+  text-align: center;
+  opacity: 20%;
+  margin-bottom: -35px;
 }
