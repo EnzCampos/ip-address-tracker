@@ -1,5 +1,5 @@
 import React from 'react'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap , Marker, Popup } from 'react-leaflet'
 
 function App() {
   const [info, setInfo] = React.useState({
@@ -38,6 +38,13 @@ function App() {
             "isp": res.isp,
             "position": [res.location.lat, res.location.lng]
         }))
+      ChangeView();
+    }
+
+    function ChangeView({ center, zoom }) {
+      const map = useMap();
+      map.setView(center, zoom);
+      return null;
     }
 
   return (
@@ -65,7 +72,8 @@ function App() {
         </div>
       </div>
       <div className='map'>
-        <MapContainer center={info.position} zoom={14} scrollWheelZoom={false}>
+        <MapContainer center={info.position} zoom={14} scrollWheelZoom={true}>
+          <ChangeView center={info.position} zoom={14} /> 
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
