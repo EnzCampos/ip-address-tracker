@@ -3,15 +3,14 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url('pattern-bg.png');
   background-repeat: no-repeat;
   background-size: 100vw 300px;
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -30,8 +29,8 @@ h1 {
 
 .input-box {
   display: flex;
-  width: 80%;
-  margin-left: 10%;
+  width: 40%;
+  margin: auto;
 }
 
 .address-input {
@@ -53,13 +52,17 @@ h1 {
 
 .info-box {
   display: grid;
+  margin: auto;
   margin-top: 50px;
+  width: 60%;
   grid-template-columns: repeat(4, 1fr);
   padding: 30px;
+  position: relative;
   color: grey;
   background-color: whitesmoke;
   border-radius: 15px;
   grid-gap: 5%;
+  z-index: 2;
 }
 
 .info-item-border {
@@ -71,4 +74,12 @@ h3 {
   color: black;
   margin-right: 15px;
   margin-top: 5px;
+}
+
+.leaflet-container {
+  position: relative;
+  z-index: 1;
+  top: -40px;
+  width: 100vw;
+  height: 60vh;
 }

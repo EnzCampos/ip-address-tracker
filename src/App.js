@@ -1,4 +1,5 @@
 import React from 'react'
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 
 function App() {
   const [info, setInfo] = React.useState({
@@ -31,7 +32,19 @@ function App() {
           <h3>{info.isp}</h3>
         </div>
       </div>
-      <div>Map PlaceHolder</div>
+      <div className='map'>
+        <MapContainer center={[40.661311, -73.941910]} zoom={14} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[40.661311, -73.941910]}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </div>
     </div>
   );
 }
