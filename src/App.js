@@ -59,13 +59,13 @@ function App() {
       </div>
       <div className="info-box">
         <div className='ip info-item-border'>IP ADDRESS
-          <h3>{info.ipAddress ? info.ipAddress : "192.212.174.101"}</h3>
+          <h3 className='ip'>{info.ipAddress ? info.ipAddress : "192.212.174.101"}</h3>
         </div>
         <div className='location info-item-border'>LOCATION
-          <h3>{info.location}</h3>
+          <h3 className='location middle'>{info.location}</h3>
         </div>
         <div className='timezone info-item-border'>TIMEZONE
-          <h3>{info.timezone}</h3>
+          <h3 className='timezone middle'>{info.timezone}</h3>
         </div>
         <div className='isp info-item'>ISP
           <h3>{info.isp}</h3>
